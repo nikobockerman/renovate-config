@@ -1,0 +1,3 @@
+{
+  "extends": ["github>nikobockerman/renovate-config:common.json5"]
+}
