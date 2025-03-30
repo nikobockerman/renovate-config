@@ -1,2 +1,3 @@
 # renovate-config
-Shared Renovate config preset 
+
+Shared Renovate config preset
