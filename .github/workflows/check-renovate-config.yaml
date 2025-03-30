@@ -2,8 +2,11 @@ name: Check - Renovate config
 on:
   pull_request:
     paths:
+      - "*.json5"
+      - "default.json"
       - ".github/renovate.json5"
       - ".github/workflows/check-renovate-config.yaml"
+      - "package.json"
   workflow_call:
   workflow_dispatch:
 
@@ -14,5 +17,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - name: Validate renovate config
-        uses: suzuki-shunsuke/github-action-renovate-config-validator@c22827f47f4f4a5364bdba19e1fe36907ef1318e # v1.1.1
+      - name: Setup project
+        uses: ./.github/actions/yarn-project-setup
+      - name: Renovate config validator
+        run: yarn run check:renovateconfig
