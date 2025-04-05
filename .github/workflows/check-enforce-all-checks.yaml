@@ -4,11 +4,7 @@ on:
 
 jobs:
   enforce-all-checks:
-    runs-on: ubuntu-latest
+    name: Enforce all checks pass
+    uses: nikobockerman/github-actions/.github/workflows/check-enforce-all-checks.yaml@main
     permissions:
       checks: read
-    steps:
-      - name: GitHub Checks
-        uses: poseidon/wait-for-status-checks@899c768d191b56eef585c18f8558da19e1f3e707 # v0.6.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
