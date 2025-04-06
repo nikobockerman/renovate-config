@@ -3,7 +3,10 @@
   packageRules: [
     {
       description: "Automerge: digest updates of github-actions repository",
-      matchPackageNames: ["nikobockerman/github-actions"],
+      matchPackageNames: [
+        "nikobockerman/github-actions",
+        "nikobockerman/github-workflows",
+      ],
       matchUpdateTypes: ["digest"],
       automerge: true,
     },
