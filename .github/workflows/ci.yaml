@@ -11,7 +11,7 @@ on:
 
 jobs:
   check-github-actions:
-    uses: ./.github/workflows/check-github-actions.yaml
+    uses: nikobockerman/github-actions/.github/workflows/check-github-actions.yaml@c75aeec4bead81a5a8f4b50a1de3b14a2a397e4d
   check-prettier:
     uses: ./.github/workflows/check-prettier.yaml
   check-renovate-config:
