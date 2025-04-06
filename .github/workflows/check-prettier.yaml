@@ -6,4 +6,4 @@ on:
 
 jobs:
   wf:
-    uses: nikobockerman/github-actions/.github/workflows/check-prettier.yaml@c75aeec4bead81a5a8f4b50a1de3b14a2a397e4d
+    uses: nikobockerman/github-workflows/.github/workflows/check-prettier.yaml@43aca657d9f7a3a58efdf9e2b33668a0f4b6fb6e
