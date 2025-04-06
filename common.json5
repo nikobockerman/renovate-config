@@ -7,6 +7,7 @@
     "github>nikobockerman/renovate-config:major-updates.json5",
     "github>nikobockerman/renovate-config:minor-updates.json5",
   ],
+  automergeStrategy: "merge-commit",
   lockFileMaintenance: {
     enabled: true,
   },
