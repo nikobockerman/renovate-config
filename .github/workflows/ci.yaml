@@ -11,10 +11,10 @@ on:
 
 jobs:
   check-github-actions:
-    uses: nikobockerman/github-workflows/.github/workflows/check-github-actions.yaml@43aca657d9f7a3a58efdf9e2b33668a0f4b6fb6e
+    uses: nikobockerman/github-workflows/.github/workflows/check-github-actions.yaml@d32b3b6765f463389cf43ee69b0bb1a6a8fe80f6
   check-prettier:
-    uses: nikobockerman/github-workflows/.github/workflows/check-prettier.yaml@43aca657d9f7a3a58efdf9e2b33668a0f4b6fb6e
+    uses: nikobockerman/github-workflows/.github/workflows/check-prettier.yaml@d32b3b6765f463389cf43ee69b0bb1a6a8fe80f6
   check-renovate-config:
     uses: ./.github/workflows/check-renovate-config.yaml
   check-yarn:
-    uses: nikobockerman/github-workflows/.github/workflows/check-yarn.yaml@43aca657d9f7a3a58efdf9e2b33668a0f4b6fb6e
+    uses: nikobockerman/github-workflows/.github/workflows/check-yarn.yaml@d32b3b6765f463389cf43ee69b0bb1a6a8fe80f6
