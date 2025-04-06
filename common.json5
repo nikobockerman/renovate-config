@@ -3,6 +3,7 @@
   extends: [
     "config:best-practices",
     ":pinAllExceptPeerDependencies",
+    "github>nikobockerman/renovate-config:automerge.json5",
     "github>nikobockerman/renovate-config:major-updates.json5",
     "github>nikobockerman/renovate-config:minor-updates.json5",
   ],
