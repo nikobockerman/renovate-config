@@ -13,7 +13,7 @@ jobs:
   check-github-actions:
     uses: nikobockerman/github-actions/.github/workflows/check-github-actions.yaml@c75aeec4bead81a5a8f4b50a1de3b14a2a397e4d
   check-prettier:
-    uses: ./.github/workflows/check-prettier.yaml
+    uses: nikobockerman/github-actions/.github/workflows/check-prettier.yaml@c75aeec4bead81a5a8f4b50a1de3b14a2a397e4d
   check-renovate-config:
     uses: ./.github/workflows/check-renovate-config.yaml
   check-yarn:

@@ -2,19 +2,8 @@ name: Check - prettier
 
 on:
   pull_request:
-    paths-ignore:
-      - "**.py"
-      - "**/py.typed"
-  workflow_call:
   workflow_dispatch:
 
 jobs:
-  prettier:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - name: Setup yarn tools
-        uses: ./.github/actions/yarn-project-setup
-      - name: Check prettier
-        run: yarn run check:prettier
+  wf:
+    uses: nikobockerman/github-actions/.github/workflows/check-prettier.yaml@c75aeec4bead81a5a8f4b50a1de3b14a2a397e4d
