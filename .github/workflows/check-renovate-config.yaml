@@ -17,7 +17,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - name: Setup project
-        uses: ./.github/actions/yarn-project-setup
       - name: Renovate config validator
-        run: yarn run check:renovateconfig
+        run: |
+          npx --package=renovate --yes -- \
+            renovate-config-validator --strict \
+            *.json5 \
+            default.json \
+            .github/renovate.json5
