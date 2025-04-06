@@ -1,0 +1,10 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: "Devcontainer: disable all updates",
+      matchFileNames: [".devcontainer/**"],
+      enabled: false,
+    },
+  ],
+}
