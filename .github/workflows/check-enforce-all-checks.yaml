@@ -5,6 +5,6 @@ on:
 jobs:
   enforce-all-checks:
     name: Enforce all checks pass
-    uses: nikobockerman/github-actions/.github/workflows/check-enforce-all-checks.yaml@v1
+    uses: nikobockerman/github-actions/.github/workflows/check-enforce-all-checks.yaml@7b1af6f4c86875452a3c50b3d7ebdc25fa5a5010
     permissions:
       checks: read
