@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: "Automerge: digest updates of github-actions repository",
+      matchPackageNames: ["nikobockerman/github-actions"],
+      matchUpdateTypes: ["digest"],
+      automerge: true,
+    },
+  ],
+}
