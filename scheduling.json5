@@ -1,0 +1,31 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: "Major updates: min age and schedule",
+      matchUpdateTypes: ["major"],
+      minimumReleaseAge: "2 weeks",
+      schedule: ["* * * * 0,5-6"], // Friday - Sunday
+    },
+    {
+      description: "Minor updates: min age and schedule",
+      matchUpdateTypes: ["minor"],
+      minimumReleaseAge: "5 days",
+      schedule: ["* * * * 0,5-6"], // Friday - Sunday
+    },
+    {
+      description: "Minor <= 0.x as major: min age and schedule",
+      matchUpdateTypes: ["minor"],
+      matchCurrentVersion: "<1",
+      minimumReleaseAge: "2 weeks",
+      schedule: ["* * * * 0,5-6"], // Friday - Sunday
+    },
+    {
+      description: "Patch <= 0.x as minor: min age and schedule",
+      matchUpdateTypes: ["patch"],
+      matchCurrentVersion: "<1",
+      minimumReleaseAge: "5 days",
+      schedule: ["* * * * 0,5-6"], // Friday - Sunday
+    },
+  ],
+}
