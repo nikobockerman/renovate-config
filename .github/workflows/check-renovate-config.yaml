@@ -9,6 +9,8 @@ on:
       - "package.json"
   workflow_call:
   workflow_dispatch:
+permissions:
+  contents: read
 
 jobs:
   renovate-config-validator:
