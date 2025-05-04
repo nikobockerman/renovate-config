@@ -4,7 +4,6 @@
     "config:best-practices",
     ":pinAllExceptPeerDependencies",
     "github>nikobockerman/renovate-config:automerge.json5",
-    "github>nikobockerman/renovate-config:devcontainer.json5",
     "github>nikobockerman/renovate-config:rust-toolchain.json5",
     "github>nikobockerman/renovate-config:scheduling.json5",
   ],
