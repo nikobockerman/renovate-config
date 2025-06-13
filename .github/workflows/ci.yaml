@@ -15,10 +15,10 @@ permissions:
 
 jobs:
   check-github-actions:
-    uses: nikobockerman/github-workflows/.github/workflows/check-github-actions.yaml@00f3fa57247684c3937dfdda879ff0f6e95584e4
+    uses: nikobockerman/github-workflows/.github/workflows/check-github-actions.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
   check-prettier:
-    uses: nikobockerman/github-workflows/.github/workflows/check-prettier.yaml@00f3fa57247684c3937dfdda879ff0f6e95584e4
+    uses: nikobockerman/github-workflows/.github/workflows/check-prettier.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
   check-renovate-config:
     uses: ./.github/workflows/check-renovate-config.yaml
   check-yarn:
-    uses: nikobockerman/github-workflows/.github/workflows/check-yarn.yaml@00f3fa57247684c3937dfdda879ff0f6e95584e4
+    uses: nikobockerman/github-workflows/.github/workflows/check-yarn.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
