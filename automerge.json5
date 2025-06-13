@@ -10,5 +10,16 @@
       matchUpdateTypes: ["digest"],
       automerge: true,
     },
+    {
+      description: "Automerge: all updates",
+      matchUpdateTypes: [
+        "major",
+        "minor",
+        "patch",
+        "digest",
+        "lockFileMaintenance",
+      ],
+      automerge: true,
+    },
   ],
 }
