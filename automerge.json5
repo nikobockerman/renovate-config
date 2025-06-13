@@ -2,12 +2,23 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   packageRules: [
     {
-      description: "Automerge: digest updates of github-actions repository",
+      description: "Automerge: digest updates of shared github actions+workflows repositories",
       matchPackageNames: [
         "nikobockerman/github-actions",
         "nikobockerman/github-workflows",
       ],
       matchUpdateTypes: ["digest"],
+      automerge: true,
+    },
+    {
+      description: "Automerge: all updates",
+      matchUpdateTypes: [
+        "major",
+        "minor",
+        "patch",
+        "digest",
+        "lockFileMaintenance",
+      ],
       automerge: true,
     },
   ],
