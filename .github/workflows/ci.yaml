@@ -24,14 +24,11 @@ jobs:
     uses: nikobockerman/github-workflows/.github/workflows/mise-task.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
     with:
       task: check:renovateconfig
-  check-yarn:
-    uses: nikobockerman/github-workflows/.github/workflows/check-yarn.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
 
   check:
     needs:
       - check-prettier
       - check-renovate-config
-      - check-yarn
     if: always()
     runs-on: ubuntu-latest
     steps:
