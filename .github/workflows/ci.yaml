@@ -12,10 +12,18 @@ permissions:
   contents: read
 
 jobs:
+  mise-cache:
+    uses: nikobockerman/github-workflows/.github/workflows/mise-prepare-cache.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
   check-prettier:
-    uses: nikobockerman/github-workflows/.github/workflows/check-prettier.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
+    needs: mise-cache
+    uses: nikobockerman/github-workflows/.github/workflows/mise-task.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
+    with:
+      task: check:prettier
   check-renovate-config:
-    uses: ./.github/workflows/check-renovate-config.yaml
+    needs: mise-cache
+    uses: nikobockerman/github-workflows/.github/workflows/mise-task.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
+    with:
+      task: check:renovateconfig
   check-yarn:
     uses: nikobockerman/github-workflows/.github/workflows/check-yarn.yaml@227dcb13eb6b8e20859b6561ddd38632047b12bd
 
