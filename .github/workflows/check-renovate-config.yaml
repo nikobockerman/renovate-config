@@ -1,12 +1,5 @@
 name: Check - Renovate config
 on:
-  pull_request:
-    paths:
-      - "*.json5"
-      - "default.json"
-      - ".github/renovate.json5"
-      - ".github/workflows/check-renovate-config.yaml"
-      - "package.json"
   workflow_call:
   workflow_dispatch:
 permissions:
