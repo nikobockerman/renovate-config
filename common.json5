@@ -4,7 +4,6 @@
     "config:best-practices",
     ":pinAllExceptPeerDependencies",
     "github>nikobockerman/renovate-config:automerge.json5",
-    "github>nikobockerman/renovate-config:mise.json5",
     "github>nikobockerman/renovate-config:scheduling.json5",
   ],
   automergeStrategy: "merge-commit",
@@ -13,4 +12,14 @@
   },
   postUpdateOptions: ["yarnDedupeHighest"],
   separateMinorPatch: true,
+
+  // Package rules
+  packageRules: [
+    {
+      description: "Don't pin node from mise: not used as direct dep anywhere, only to enforce major version for other direct deps",
+      matchManagers: ["mise"],
+      matchDepNames: ["node"],
+      rangeStrategy: "update-lockfile",
+    },
+  ],
 }
