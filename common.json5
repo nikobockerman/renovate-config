@@ -21,5 +21,14 @@
       matchDepNames: ["node"],
       rangeStrategy: "update-lockfile",
     },
+    {
+      description: "Group updates of shared github actions+workflows repositories",
+      matchPackageNames: [
+        "nikobockerman/github-actions",
+        "nikobockerman/github-workflows",
+      ],
+      matchUpdateTypes: ["digest"],
+      groupName: "shared-github-actions-workflows",
+    },
   ],
 }
