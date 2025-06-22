@@ -5,7 +5,6 @@
     ":pinAllExceptPeerDependencies",
     "github>nikobockerman/renovate-config:automerge.json5",
     "github>nikobockerman/renovate-config:mise.json5",
-    "github>nikobockerman/renovate-config:rust-toolchain.json5",
     "github>nikobockerman/renovate-config:scheduling.json5",
   ],
   automergeStrategy: "merge-commit",
