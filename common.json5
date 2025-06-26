@@ -3,6 +3,7 @@
   extends: [
     "config:best-practices",
     ":pinAllExceptPeerDependencies",
+    "customManagers:githubActionsVersions",
     "github>nikobockerman/renovate-config:automerge.json5",
     "github>nikobockerman/renovate-config:scheduling.json5",
   ],
