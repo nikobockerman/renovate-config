@@ -4,6 +4,7 @@
     "config:best-practices",
     ":pinAllExceptPeerDependencies",
     "customManagers:githubActionsVersions",
+    "npm:unpublishSafe",
   ],
   automergeStrategy: "merge-commit",
   lockFileMaintenance: {
