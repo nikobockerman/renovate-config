@@ -11,6 +11,7 @@
     enabled: true,
   },
   postUpdateOptions: ["yarnDedupeHighest"],
+  printConfig: true,
   separateMinorPatch: true,
 
   // Package rules
