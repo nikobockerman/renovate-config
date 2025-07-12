@@ -4,8 +4,6 @@
     "config:best-practices",
     ":pinAllExceptPeerDependencies",
     "customManagers:githubActionsVersions",
-    "github>nikobockerman/renovate-config:automerge.json5",
-    "github>nikobockerman/renovate-config:scheduling.json5",
   ],
   automergeStrategy: "merge-commit",
   lockFileMaintenance: {
@@ -29,6 +27,23 @@
         "nikobockerman/github-workflows",
       ],
       groupName: "shared-github-actions-workflows",
+    },
+    {
+      description: "Schedule for all version updates",
+      matchUpdateTypes: ["major", "minor", "patch", "digest"],
+      minimumReleaseAge: "1 day",
+      schedule: ["* * * * 0,5-6"], // Friday - Sunday
+    },
+    {
+      description: "Automerge for all updates",
+      matchUpdateTypes: [
+        "major",
+        "minor",
+        "patch",
+        "digest",
+        "lockFileMaintenance",
+      ],
+      automerge: true,
     },
   ],
 }
