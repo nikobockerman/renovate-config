@@ -32,7 +32,6 @@
     {
       description: "Schedule for all version updates",
       matchUpdateTypes: ["major", "minor", "patch", "digest"],
-      minimumReleaseAge: "1 day",
       schedule: ["* * * * 0,5-6"], // Friday - Sunday
     },
     {
