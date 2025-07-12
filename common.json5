@@ -23,12 +23,12 @@
       rangeStrategy: "update-lockfile",
     },
     {
-      description: "Group updates of shared github actions+workflows repositories",
+      description: "Group updates of shared GitHub actions and workflows repositories",
       matchPackageNames: [
         "nikobockerman/github-actions",
         "nikobockerman/github-workflows",
       ],
-      groupName: "shared-github-actions-workflows",
+      groupName: "Shared GitHub Actions and Workflows",
     },
     {
       description: "Schedule for all version updates",
