@@ -28,7 +28,6 @@
         "nikobockerman/github-actions",
         "nikobockerman/github-workflows",
       ],
-      matchUpdateTypes: ["digest"],
       groupName: "shared-github-actions-workflows",
     },
   ],
