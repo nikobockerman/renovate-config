@@ -13,15 +13,15 @@ permissions:
 
 jobs:
   mise-cache:
-    uses: nikobockerman/github-workflows/.github/workflows/mise-prepare-cache.yaml@04f8bc8237063a4ffee6ddcacab0f7d37ac7cc52 # v1.0.8
+    uses: nikobockerman/github-workflows/.github/workflows/mise-prepare-cache.yaml@59b2d100d7654de4ce5e1478598bcdd2d874c88e # v1.0.9
   check-prettier:
     needs: mise-cache
-    uses: nikobockerman/github-workflows/.github/workflows/mise-task.yaml@04f8bc8237063a4ffee6ddcacab0f7d37ac7cc52 # v1.0.8
+    uses: nikobockerman/github-workflows/.github/workflows/mise-task.yaml@59b2d100d7654de4ce5e1478598bcdd2d874c88e # v1.0.9
     with:
       task: check:prettier
   check-renovate-config:
     needs: mise-cache
-    uses: nikobockerman/github-workflows/.github/workflows/mise-task.yaml@04f8bc8237063a4ffee6ddcacab0f7d37ac7cc52 # v1.0.8
+    uses: nikobockerman/github-workflows/.github/workflows/mise-task.yaml@59b2d100d7654de4ce5e1478598bcdd2d874c88e # v1.0.9
     with:
       task: check:renovateconfig
 
