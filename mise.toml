@@ -25,5 +25,4 @@ depends = [
 run = "prettier --write --cache-location .prettiercache ."
 
 [tools]
-node = "22"
 "npm:prettier" = "3.6.2"
