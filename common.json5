@@ -4,14 +4,13 @@
     "config:best-practices",
     ":pinAllExceptPeerDependencies",
     "customManagers:githubActionsVersions",
-    "github>nikobockerman/renovate-config:automerge.json5",
-    "github>nikobockerman/renovate-config:scheduling.json5",
+    "npm:unpublishSafe",
   ],
   automergeStrategy: "merge-commit",
   lockFileMaintenance: {
     enabled: true,
   },
-  postUpdateOptions: ["yarnDedupeHighest"],
+  postUpdateOptions: ["npmDedupe", "yarnDedupeHighest"],
   separateMinorPatch: true,
 
   // Package rules
@@ -23,13 +22,28 @@
       rangeStrategy: "update-lockfile",
     },
     {
-      description: "Group updates of shared github actions+workflows repositories",
+      description: "Group updates of shared GitHub actions and workflows repositories",
       matchPackageNames: [
         "nikobockerman/github-actions",
         "nikobockerman/github-workflows",
       ],
-      matchUpdateTypes: ["digest"],
-      groupName: "shared-github-actions-workflows",
+      groupName: "Shared GitHub Actions and Workflows",
+    },
+    {
+      description: "Schedule for all version updates",
+      matchUpdateTypes: ["major", "minor", "patch", "digest"],
+      schedule: ["* * * * 0,5-6"], // Friday - Sunday
+    },
+    {
+      description: "Automerge for all updates",
+      matchUpdateTypes: [
+        "major",
+        "minor",
+        "patch",
+        "digest",
+        "lockFileMaintenance",
+      ],
+      automerge: true,
     },
   ],
 }
